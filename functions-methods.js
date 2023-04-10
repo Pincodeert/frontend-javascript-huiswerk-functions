@@ -67,12 +67,15 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 
 function checkEmailValidity(emailAddress){
 
-    if (emailAddress.includes("@") && !emailAddress.includes(",")
+    return emailAddress.includes("@") && !emailAddress.includes(",")
+        && emailAddress.lastIndexOf(".") !== emailAddress.length - 1;
+    //ipv:
+    /*if (emailAddress.includes("@") && !emailAddress.includes(",")
         && !(emailAddress.lastIndexOf(".") === emailAddress.length - 1)){
         return true;
     } else {
         return false;
-    }
+    }*/
 }
 console.log(checkEmailValidity("n.eeken@novi.nl"));
 console.log(checkEmailValidity("tessmellink@novi.nl"));

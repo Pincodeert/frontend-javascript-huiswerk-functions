@@ -49,7 +49,7 @@ function cumLaude (grades){
     let counter = 0;
     for (let i = 0; i < grades.length; i++) {
         if(grades[i] >= 8){
-            counter = counter + 1;
+            counter = counter++;
         }
     } return counter;
 }
@@ -98,7 +98,7 @@ console.log(cumLaude([8, 9, 4, 6, 10]))
 function averageGrade(grades){
     let sumOfGrades = 0;
     for ( let i = 0; i < grades.length; i++) {
-        sumOfGrades = sumOfGrades + grades[i];
+        sumOfGrades += grades[i];// ipv: sumOfGrades = sumOfGrades + grades[i];
     }
     const average = sumOfGrades/(grades.length);
     return average;
